@@ -1,0 +1,86 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\PortfolioModel;
+use App\Http\Requests\StorePortfolioModelRequest;
+use App\Http\Requests\UpdatePortfolioModelRequest;
+
+class PortfolioModelController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \App\Http\Requests\StorePortfolioModelRequest  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(StorePortfolioModelRequest $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\PortfolioModel  $portfolioModel
+     * @return \Illuminate\Http\Response
+     */
+    public function show(PortfolioModel $portfolioModel)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\PortfolioModel  $portfolioModel
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(PortfolioModel $portfolioModel)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \App\Http\Requests\UpdatePortfolioModelRequest  $request
+     * @param  \App\Models\PortfolioModel  $portfolioModel
+     * @return \Illuminate\Http\Response
+     */
+    public function update(UpdatePortfolioModelRequest $request, PortfolioModel $portfolioModel)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\PortfolioModel  $portfolioModel
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(PortfolioModel $portfolioModel)
+    {
+        //
+    }
+}
