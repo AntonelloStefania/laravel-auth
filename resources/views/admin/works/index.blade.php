@@ -21,9 +21,14 @@
                     <div class="my-4 px-3">
                         <a href="#">{{$site->link}}</a>
                     </div>
-                    <div>
-                        <a class="btn btn-primary btn-sm" href="{{route('admin.works.show', $site->id)}}">Show More</a>
+                    <div class="d-flex justify-content-around my-2">
                         <a class="btn btn-warning btn-sm" href="{{route('admin.works.edit', $site->id)}}">Edit</a>
+                        <a class="btn btn-primary btn-sm" href="{{route('admin.works.show', $site->id)}}">Show More</a>
+                        <form action="{{route('admin.works.destroy', $site->id)}}" onsubmit="return confirm('Press ok to confirm')" class="d-block" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-sm btn-danger mx-2">Delete</button>
+                        </form>
                     </div>
                 </div>
             </div>

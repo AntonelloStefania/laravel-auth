@@ -94,8 +94,10 @@ class PortfolioModelController extends Controller
      * @param  \App\Models\PortfolioModel  $portfolioModel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PortfolioModel $portfolioModel)
+    public function destroy($id)
     {
-        //
+        $site = PortfolioModel::findOrFail($id);
+        $site->delete();
+        return redirect()->route('admin.works.index');
     }
 }
