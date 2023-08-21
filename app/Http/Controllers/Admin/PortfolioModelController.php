@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 use App\Models\PortfolioModel;
 use App\Http\Requests\StorePortfolioModelRequest;
 use App\Http\Requests\UpdatePortfolioModelRequest;
+use Illuminate\Support\Faceade;
+use Illuminate\Http\Request;
 
 class PortfolioModelController extends Controller
 {
@@ -51,6 +53,13 @@ class PortfolioModelController extends Controller
         $form_data= $request->all();
 
         $site= new PortfolioModel();
+        
+        if($request->hasFile('image')){
+            $path = Storage::put('image', $request->image);
+
+            $form_data['image']=$path;
+        }
+
         $site->fill($form_data);
 
         $site->save();
@@ -82,6 +91,12 @@ class PortfolioModelController extends Controller
         $site = PortfolioModel::findOrFail($id);
         $form_data = $request->all();
         
+        if($request->hasFile('image')){
+            $path = Storage::put('image', $request->image);
+           
+            $form_data['image']=$path;
+        }
+
         $site->update($form_data);
         
         

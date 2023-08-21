@@ -5,14 +5,14 @@
     <div class="row justify-content-center">
         <div class="col-6 text-white">
 
-            <form action="{{route('admin.works.store')}}" method="POST">
+            <form action="{{route('admin.works.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 
                 <div class="form-group my-5 d-flex flex-column ">
                     <label for="" class="control-label mb-3">
                         Image URL:
                     </label>
-                    <input class="ps-3 form-control" type="text" id="image" name="image" value="{{old('image')}}">
+                    <input class="ps-3 form-control" type="file" id="image" name="image" value="{{old('image')}}">
                 </div>
                 <div class="form-group my-5 d-flex flex-column ">
                     <label for="" class="control-label mb-3">
