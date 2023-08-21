@@ -37,7 +37,7 @@ class PortfolioModelController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.works.create');
     }
 
     /**
@@ -48,7 +48,13 @@ class PortfolioModelController extends Controller
      */
     public function store(StorePortfolioModelRequest $request)
     {
-        //
+        $form_data= $request->all();
+
+        $site= new PortfolioModel();
+        $site->fill($form_data);
+
+        $site->save();
+        return redirect()->route('admin.works.index');
     }
 
 

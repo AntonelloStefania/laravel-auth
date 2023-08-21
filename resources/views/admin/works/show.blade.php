@@ -3,14 +3,42 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-12 text-center my-5">
-            <div class="my-5 text-white">
-                <h1 >{{$site->title}}</h1>
+        <div class="col-12 my-5 text-white">
+            <div class="text-center">
+                <div class="my-5 text-white">
+                    <h1 >{{$site->title}}</h1>
+                </div>
+                <div>
+                    <img src="{{$site->image}}" alt="">
+                </div>
+                <div class="my-5">
+                    <h5>Description:</h5>
+                    <p>{{$site->description}}</p>
+                </div>
             </div>
-            <div>
-                <img src="{{$site->image}}" alt="">
+            <div class="d-flex justify-content-center">
+                <h5>Development team:</h5>
+                <ul>
+                    <li>
+                        <span class="fw-bold">frontend:</span> {{$site->front_ender}}
+                    </li>
+                    <li>
+                        <span class="fw-bold"> backend:</span> {{$site->back_ender}}
+                    </li>
+                    <li>
+                        <span class="fw-bold">user experience:</span> {{$site->ux}}
+                    </li>
+                    <li>
+                        <span class="fw-bold"> user interface:</span> {{$site->ui}}
+                    </li>
+                    <li>
+                        <span class="fw-bold">illustrator:</span> {{$site->illustrator}}
+                    </li>
+                </ul>
             </div>
-            
+            <div class="text-center">
+              <span>Link to Project: <a href="#">{{$site->link}}</a></span>
+            </div>
         </div>
     </div>
 </div>

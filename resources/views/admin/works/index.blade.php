@@ -17,34 +17,20 @@
                     <div class="card-text text-center">
                         <p>{{$site->description}}</p>
                     </div>
-                    {{-- <div>
-                        <ul>
-                            <li>
-                                <span class="fw-bold">frontend:</span> {{$site->front_ender}}
-                            </li>
-                            <li>
-                                <span class="fw-bold"> backend:</span> {{$site->back_ender}}
-                            </li>
-                            <li>
-                                <span class="fw-bold">user experience:</span> {{$site->ux}}
-                            </li>
-                            <li>
-                                <span class="fw-bold"> user interface:</span> {{$site->ui}}
-                            </li>
-                            <li>
-                                <span class="fw-bold">illustrator:</span> {{$site->illustrator}}
-                            </li>
-                        </ul>
-                    </div> --}}
+                  
                     <div class="my-4 px-3">
                         <a href="#">{{$site->link}}</a>
                     </div>
                     <div>
                         <a class="btn btn-primary btn-sm" href="{{route('admin.works.show', $site->id)}}">Show More</a>
+                       
                     </div>
                 </div>
             </div>
-            @endforeach
+        @endforeach
+            <div class="text-center my-5">
+                <a href="{{route('admin.works.create')}}" class="btn btn-warning btn-sm">Add New Work</a>
+            </div>
     </div>
 </div>
 
