@@ -23,13 +23,13 @@
                     </div>
                     <div>
                         <a class="btn btn-primary btn-sm" href="{{route('admin.works.show', $site->id)}}">Show More</a>
-                       
+                        <a class="btn btn-warning btn-sm" href="{{route('admin.works.edit', $site->id)}}">Edit</a>
                     </div>
                 </div>
             </div>
         @endforeach
             <div class="text-center my-5">
-                <a href="{{route('admin.works.create')}}" class="btn btn-warning btn-sm">Add New Work</a>
+                <a href="{{route('admin.works.create')}}" class="btn btn-success btn-sm">Add New Work</a>
             </div>
     </div>
 </div>

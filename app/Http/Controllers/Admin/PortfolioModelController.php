@@ -64,9 +64,10 @@ class PortfolioModelController extends Controller
      * @param  \App\Models\PortfolioModel  $portfolioModel
      * @return \Illuminate\Http\Response
      */
-    public function edit(PortfolioModel $portfolioModel)
+    public function edit($id)
     {
-        //
+        $site =PortfolioModel::findOrFail($id);
+       return view('admin.works.edit', compact('site'));
     }
 
     /**
@@ -76,9 +77,15 @@ class PortfolioModelController extends Controller
      * @param  \App\Models\PortfolioModel  $portfolioModel
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePortfolioModelRequest $request, PortfolioModel $portfolioModel)
-    {
-        //
+    public function update(UpdatePortfolioModelRequest $request, $id)
+    {   
+        $site = PortfolioModel::findOrFail($id);
+        $form_data = $request->all();
+        
+        $site->update($form_data);
+        
+        
+        return redirect()->route('admin.works.index');
     }
 
     /**
