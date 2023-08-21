@@ -18,7 +18,18 @@ class PortfolioModelController extends Controller
         $sites = PortfolioModel::all();
         return view('admin.works.index', compact('sites'));
     }
-
+    
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\PortfolioModel  $portfolioModel
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $site = PortfolioModel::findOrFail($id);
+        return view('admin.works.show', compact('site'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -40,16 +51,6 @@ class PortfolioModelController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\PortfolioModel  $portfolioModel
-     * @return \Illuminate\Http\Response
-     */
-    public function show(PortfolioModel $portfolioModel)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
