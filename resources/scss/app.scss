@@ -9,5 +9,80 @@
 }
 
 body {
-    background-color: rgb(30, 0, 90);
+    background-color: rgb(27 20 42);
+}
+
+nav {
+    background-color: #471AA0;
+}
+
+.card {
+    background-color: rgb(240 240 243);
+    box-shadow: 0px 0px 6px 2px #a276f9;
+
+    h4 {
+        a {
+            text-decoration: none;
+            color: #471AA0;
+            font-weight: bold;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 14rem;
+    }
+
+    .edit-btn {
+        background-color: #be9aff;
+        font-weight: bold;
+    }
+
+    .edit-btn:hover {
+        background-color: #9176c4;
+        font-weight: bold;
+    }
+
+    .show-btn {
+        background-color: #b39363;
+        color: white;
+        font-weight: bold;
+    }
+
+    .show-btn:hover {
+        background-color: #e4ba7b;
+        color: black;
+
+    }
+
+    .delete-btn {
+        background-color: #be9aff;
+        font-weight: bold;
+    }
+
+    .delete-btn:hover {
+        background-color: #e69925;
+        font-weight: bold;
+    }
+}
+
+.new-btn {
+    background-color: #ffcd82;
+    font-weight: bold;
+}
+
+.new-btn:hover {
+    background-color: #ffbb56;
+    color: black;
+}
+
+.back-btn {
+    background-color: #b39363;
+    color: white;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    background-color: #e4ba7b;
+
 }
