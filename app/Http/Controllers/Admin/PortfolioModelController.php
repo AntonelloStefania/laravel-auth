@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Models\PortfolioModel;
 use App\Http\Requests\StorePortfolioModelRequest;
 use App\Http\Requests\UpdatePortfolioModelRequest;
-use Illuminate\Support\Faceade;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class PortfolioModelController extends Controller

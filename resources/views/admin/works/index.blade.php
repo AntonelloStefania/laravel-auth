@@ -8,7 +8,7 @@
                 
                 <div class="card d-flex flex-column justify-content-between">
                     <div class="card-img-top">
-                        <img class="img-fluid" src="{{$site->image}}" alt="">
+                        <img class="img-fluid" src="{{asset('storage/'.$site->image)}}" alt="">
                     </div>
                     <div class="card-title text-center my-3">
                         <h4><a href="#">{{$site->title}}</a></h4>

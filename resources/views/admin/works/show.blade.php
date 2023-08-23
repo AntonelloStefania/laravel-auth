@@ -9,7 +9,7 @@
                     <h1 >{{$site->title}}</h1>
                 </div>
                 <div>
-                    <img src="{{$site->image}}" alt="">
+                    <img src="{{asset('storage/'.$site->image)}}" alt="">
                 </div>
                 <div class="my-5">
                     <h5>Description:</h5>
