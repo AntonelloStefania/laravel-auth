@@ -12,29 +12,30 @@
                     </div>
                     <div class="card-title text-center my-3">
                         <h4><a href="#">{{$site->title}}</a></h4>
-                        
                     </div>
                     <div class="card-text text-center">
                         <p>{{$site->description}}</p>
                     </div>
-                  
-                    <div class="my-4 px-3">
-                        <a href="#">{{$site->link}}</a>
+                    <div class="text-center">
+                        <a class="btn show-btn btn-md" href="{{route('admin.works.show', $site->id)}}">Show More</a>
                     </div>
-                    <div class="d-flex justify-content-around my-2">
-                        <a class="btn btn-warning btn-sm" href="{{route('admin.works.edit', $site->id)}}">Edit</a>
-                        <a class="btn btn-primary btn-sm" href="{{route('admin.works.show', $site->id)}}">Show More</a>
+                  
+                    <div class="my-4 px-3 text-center">
+                        <a class="link" href="#">{{$site->link}}</a>
+                    </div>
+                    <div class="d-flex justify-content-around my-4">
+                        <a class="btn edit-btn btn-sm" href="{{route('admin.works.edit', $site->id)}}">Edit</a>
                         <form action="{{route('admin.works.destroy', $site->id)}}" onsubmit="return confirm('Press ok to confirm')" class="d-block" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-sm btn-danger mx-2">Delete</button>
+                            <button type="submit" class="btn btn-sm delete-btn mx-2">Delete</button>
                         </form>
                     </div>
                 </div>
             </div>
         @endforeach
             <div class="text-center my-5">
-                <a href="{{route('admin.works.create')}}" class="btn btn-success btn-sm">Add New Work</a>
+                <a href="{{route('admin.works.create')}}" class="btn new-btn btn-sm">Add New Work</a>
             </div>
     </div>
 </div>

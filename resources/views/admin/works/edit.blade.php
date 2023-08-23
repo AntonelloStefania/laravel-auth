@@ -3,6 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <div class="text-end mt-5 mb-3">
+            <a href="{{route('admin.works.index')}}" class="btn back-btn">Back</a>
+        </div>
         <div class="col-6 text-white">
 
             <form action="{{route('admin.works.update', $site->id)}}" method="POST" enctype="multipart/form-data">
@@ -67,7 +70,7 @@
                     <input class="ps-3 form-control" type="text" id="link" name="link" value="{{$site->link}}">
                 </div>
                 <div class="col-12 d-flex justify-content-center py-4">
-                    <button type="submit" class="btn btn-md btn-success">Confirm Changes</button>
+                    <button type="submit" class="btn btn-md new-btn">Confirm Changes</button>
                 </div>
             </form>
         </div>
